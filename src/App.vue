@@ -1,32 +1,40 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <!-- App.vue -->
+
+  <v-app>
+    <app-header></app-header>
+    <app-nav></app-nav>
+
+    <v-content>
+      <!-- Provides the application the proper gutter -->
+      <v-container fluid>
+        <!-- Shows the components/pages based on the router configuration -->
+        <router-view></router-view>
+      </v-container>
+    </v-content>
+
+    <v-footer>
+      <app-footer></app-footer>
+      <!-- Footer -->
+    </v-footer>
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+//Component Import
+import Header from "./components/Header";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
+export default {
+  name: "App", //Exporting the main application view
 
-#nav {
-  padding: 30px;
-}
+  //Component Register
+  components: {
+    "app-header": Header,
+    "app-nav": Nav,
+    "app-footer": Footer
+  },
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+  data: () => ({})
+};
+</script>
