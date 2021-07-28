@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import Vuetify from 'vuetify/lib';
 
+
+
 Vue.use(Vuetify);
 
 
@@ -16,5 +18,7 @@ export default new Vuetify({
         }
     },
 
-    iconfont: 'mdi', //Enables ability to use material icons 
+    iconfont: 'md',  //Enables ability to use material icons 
 });
+
+

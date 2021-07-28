@@ -1,92 +1,132 @@
 <template>
-   <v-container >
-      <v-sheet color="#A9CBD9" class="pa-3 mb-5">
-         <v-row>
-            <v-col cols="12">
-               <v-img class="" src="../assets/about-page/headshot.svg"></v-img>
-            </v-col>
 
-            <v-col cols="12">
-               <h2 class="title-script white--text cursive text center">branding, web and marketing</h2>
-               <h1 class="title-block white--text spacing-3 text overlap center ml-2">TASHII DESIGN</h1>
-               <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim dolorem eligendi labore quis, esse sequi nam molestiae soluta nobis ipsa!</p>
-               <p class="p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi maxime id commodi quas facere tenetur laboriosam fuga ad architecto quos. </p>
-               <p class="p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi maxime id commodi quas facere tenetur laboriosam fuga ad architecto quos.  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi maxime id commodi quas facere tenetur laboriosam fuga ad architecto quos</p>
-               <h3 class="italic #D9B8B8 about-h3 mt-15"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy </h3>
-            </v-col>
-         </v-row>
-      </v-sheet>
-      <v-sheet color="#BF999C" class="">
-         <v-row>
-            <v-col>
-               <h3 class="title-script white--text spacing-8 cursive text ml-5 tashii">my work process</h3>
-               <h4 class="title-block white--text spacing-3 text ml-5 overlap tashii ">MY WORK PROCESS</h4>
-            </v-col>
-         </v-row>
+ <v-sheet class="aboutPage" color="#282828" >
+     <h2 class="white--text ml-4 title-h2 ">About Me</h2>
 
-         <v-row align="start"  class="">
-            <v-col cols="12">
-               <v-img class="mx-4" src="../assets/placeholder.png"></v-img>
-            </v-col>
+   <!-- <div class="aboutPage">
 
-            <v-col cols="12" >
-                <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim dolorem eligendi labore quis, esse sequi nam molestiae soluta nobis ipsa!</p>
-               <p class="p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi maxime id commodi quas facere tenetur laboriosam fuga ad architecto quos. </p>
-               <p class="p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi maxime id commodi quas facere tenetur laboriosam fuga ad architecto quos.  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi maxime id commodi quas facere tenetur laboriosam fuga ad architecto quos</p>
-            </v-col>
-         </v-row>
+    <img :style="{'width':width}" src="../assets/about-page/headshot.png" class="pl-6 pr-6">
 
-         <v-row align="start" class="" >
-            <v-col cols="12" class="">
-                 <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim dolorem eligendi labore quis, esse sequi nam molestiae soluta nobis ipsa!</p>
-               <p class="p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi maxime id commodi quas facere tenetur laboriosam fuga ad architecto quos. </p>
-               <p class="p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi maxime id commodi quas facere tenetur laboriosam fuga ad architecto quos.  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi maxime id commodi quas facere tenetur laboriosam fuga ad architecto quos</p>
-               
-            </v-col>
+    <div class="aboutText">
 
-            <v-col cols="12" >
-              <v-img class=""  src="../assets/placeholder.png"></v-img>
-            </v-col>
-         </v-row>
-      </v-sheet>
+      <p class="body-text ma-4">My name is Tashii and I specialise in mostly visual design and branding but am also proficient in user experience, web and digital marketing. I want to help people express their own individuality through their unique brand because I believe that everyone has a story that can be told through design. </p>
 
-      <v-container class="d-flex justify-center">
-         <v-card color="#D9B8B8">
-             <v-card-text class="text white--text font-1 text-center">If you need a quote for a project, advice or any other  general assistance with your brand, don’t hesitate to get in touch.</v-card-text>
-             <v-card-text class="cursive white--text text-center font-3 spacing-3 pb-8">I look forward to working with you! </v-card-text>
-         </v-card>
-        
+      <p class="body-text ma-4">I hope to show off my creative and enthusiastic nature in all my creations and keep moving forward and in turn learning more about design and achieving satisfaction and fulfillment in everyday life.</p>
 
-      </v-container>
-       
+    </div>
 
-   </v-container>
+   </div> -->
   
+    <v-card color="#282828" class="aboutCard">
+          <img :style="{'width':width}" src="../assets/about-page/headshot.png" class="">
+    <v-card-text class="pt-0">
+          <p class="body-text ma-4 aboutText">My name is Tashii and I specialise in mostly visual design and branding but am also proficient in user experience, web and digital marketing. I want to help people express their own individuality through their unique brand because I believe that everyone has a story that can be told through design. </p>
+
+          <p class="body-text ma-4 aboutText">I hope to show off my creative and enthusiastic nature in all my creations and keep moving forward and in turn learning more about design and achieving satisfaction and fulfillment in everyday life.</p>
+    </v-card-text>
+
+    </v-card>
+
+    <div>
+      <h2 class="heading-1 white--text pa-3 ma-3 mainSkills">MAIN SKILLS</h2>
+    </div>
+
+    <div>
+
+    </div>
+
+
+   </v-sheet>
+
 </template>
 
 <script>
+
+import gsap from 'gsap'
+
 export default {
+  
+  data: () => ({
+    dialog: false,
+
+    
+  }),
+
+  mounted: function(){
+
+    const tl = gsap.timeline();
+
+    tl.add();
+
+    tl.staggerFromTo('.title-h2, .aboutCard, .mainSkills', 1, {
+      x:-200,
+      y:0,
+      opacity:0,
+      ease: 'power2.inOut',
+    }, {
+      x:0,
+      y:0,
+      opacity:1,
+      ease: 'power2.inOut',
+    }, 0.5)
+
+
+  },
+
+  computed: {
+
+    // eslint-disable-next-line vue/return-in-computed-property
+      width () {
+        switch (this.$vuetify.breakpoint.name) {
+          case 'xs': return '100%'
+          case 'sm': return '60%' 
+          case 'md': return '30%'
+          case 'lg': return '20%'
+          case 'xl': return '20%'
+     }
+   },
+},
+
 
 }
 </script>
 
 <style>
-.overlap{
-   margin-top:-0.9em !important;
+
+.aboutCard {
+  background-image: url("../assets/pattern.png");
+  background-attachment: fixed;
+  background-size: cover;
+  
 }
 
-
-.about-h3{
-   background-color:"#D9B8B8"
+.aboutCard img {
+  padding:0.2em;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+ 
 }
 
-.font-1{
-   font-size:1.2em;
+.aboutText{
+  text-align: justify;
+  align-content: center;
+  justify-content: center;
 }
 
-.font-3{
-   font-size:3em
+@media only screen and (min-width: 900px){
+  
+.aboutCard{
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+  
 }
 
+.aboutCard img{
+   margin-left:1em;
+}
 
+}
 </style>

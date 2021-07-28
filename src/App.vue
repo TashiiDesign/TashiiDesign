@@ -1,37 +1,77 @@
 <template>
-  <!-- App.vue -->
+<v-app>
+  
+ <div v-if="!isMobile()">
+   <app-nav></app-nav>
+</div>
+<div v-else>
+  <app-nav-mobile></app-nav-mobile>
+</div>
+  <!-- Sizes your content based upon application components -->
+  <v-main app>
 
-  <v-app>
+    <!-- Provides the application the proper gutter -->
+    <v-container fluid class="pa-0 ma-0 fill-height dark-grey-tashii d-block viewport">
 
-    
-      <app-header></app-header>
-      
-    <v-main>
+      <!-- If using vue-router -->
+      <router-view></router-view>
 
-      <!-- Provides the application the proper gutter -->
-        <!-- Shows the components/pages based on the router configuration -->
-        <router-view></router-view>
-    </v-main>
+    </v-container>
+  </v-main>
 
-
-      <!-- Footer -->
-      <app-footer></app-footer>
-  </v-app>
+ <!-- <v-footer app>
+   -->
+  <!-- </v-footer> -->
+</v-app>
 </template>
 
 <script>
+
 //Component Import
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+  import Nav from "./components/Nav.vue";
+  import NavMobile from "./components/NavMobile.vue";
+
+
 export default {
+  
   name: "App", //Exporting the main application view
 
   //Component Register
   components: {
-    "app-header": Header,
-    "app-footer": Footer
+    "app-nav": Nav,
+    "app-nav-mobile": NavMobile
   },
 
-  data: () => ({})
+  data: () => ({ 
+
+   
+  }),
+
+   methods: {
+      isMobile() {
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+      }
+    }
+
+  
 };
 </script>
+
+<style>
+
+.dark-grey-tashii{
+  background-color: #282828
+}
+
+.body-text{
+  letter-spacing: 0px;
+  color: white !important;
+}
+
+
+</style>

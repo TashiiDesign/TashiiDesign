@@ -1,107 +1,162 @@
 <template>
   <div>
+    <background class="bg"></background>
+    
+    <v-sheet color="#282828" class="sheet"  >
 
-    <v-container fluid class="mt-3">
-      <v-card elevation="0" color="#A9CBD9">
-        <v-row>
-          <v-col cols="12">
-            <v-img class="ma-4"  src="../assets/placeholder.png"></v-img>
-          </v-col>  
-          <v-col cols="12" class="">
-              <v-card-title class="title-script white--text spacing-3 cursive text center">featured</v-card-title>
-              <v-card-subtitle class="title-block white--text spacing-8 text center">FEATURED</v-card-subtitle>
-              <v-divider color="white"></v-divider>
-              <v-card-text  >
-                <p class="p" color="#282828">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum rerum blanditiis consectetur veniam, commodi beatae eos sed excepturi qui praesentium consequatur molestiae saepe asperiores assumenda. Consequatur aperiam beatae porro rerum!</p>
-                <p class="p" color="#282828">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quidem dolorem, consectetur minus odio eum rerum ipsam ipsum laborum iusto.</p>
-              </v-card-text>
-            </v-col>
-      </v-row>
-      </v-card>
+    <div class="titles">
+        <h2  class="white--text title-h2 ">I'm Tashii</h2>
+        <h1 class="dark-grey--text pa-1 pl-3 title-h1">BRANDING | WEB | MARKETING</h1> 
+    </div>
 
-      <v-row>
-        <v-col cols="12">
-          <v-card elevation="0" color="#A9CBD9">
-            <v-img class="pa-3" src="../assets/placeholder.png"></v-img>
-            <v-card-tile class="ma-3 title-block white--text spacing-8 text center">PROJECT 1</v-card-tile>
-            <v-card-text class="p center"><div class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, excepturi...</div></v-card-text>
-          </v-card>
-        </v-col>
+ <div class="mt-7 contactButton">
 
-        <v-col cols="12">
-          <v-card  elevation="0" color="#A9CBD9">
-            <v-img src="../assets/placeholder.png"></v-img>
-            <v-card-tile class="ma-3 title-block white--text spacing-8 text center">PROJECT 2</v-card-tile>
-            <v-card-text class="p center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta, nesciunt....</v-card-text>
-          </v-card>
-        </v-col>
-      </v-row>
+        <v-btn color="#BF999C" outlined tile><router-link to='/Contact' class="white--text router ">
+          Contact me!
+          </router-link>
+        </v-btn>
 
-    </v-container>
-
-    <v-sheet class="pa-6" color="#282828">
-      <h4 class="h4 white--text italic d-flex justify-space-around spacing-3 text">quote testimonial</h4>
-      <h6 class="caption white--text d-flex justify-space-around mt-5 spacing-3 opacity text"> - name and company name</h6>
-    </v-sheet>
-
-    <v-sheet class="mt-6 pa-1 pt-4 pattern center" color="#BF999C">
-      <h3 class="white--text d-flex justify-space-around spacing-3 opacity express">EXPRESS YOUR INDIVIDUALITY</h3>
-      <h4 class="h4 white--text d-flex justify-space-around spacing-5 text express">through your brand</h4>
-      <v-divider class="center mt-4 opacity" color="white"></v-divider>
-
-      <v-btn elevation="0" color="#D9B8B8" class="mt-3 mb-2 pa-3 d-flex justify-center center white--text text">GET IN TOUCH</v-btn>
+        
+     </div>
 
     </v-sheet>
 
   </div>
+  
 </template>
 
 <script>
 
+import gsap from 'gsap'
+ import Background from "../components/background.vue";
+
 export default {
+
+  //Component Register
+  components: {
+   "background": Background,
+
+  },
+
   data: () => ({
     dialog: false,
-  })
-  
+
+    
+  }),
+
+  computed: {
+
+    // eslint-disable-next-line vue/return-in-computed-property
+      width () {
+        switch (this.$vuetify.breakpoint.name) {
+          case 'xs': return '60%'
+          case 'sm': return '30%' 
+          case 'md': return '25%'
+          case 'lg': return '25%'
+          case 'xl': return '25%'
+     }
+   }
+},
+
+   mounted: function(){
+
+    const tl = gsap.timeline();
+
+    tl.add();
+
+    tl.staggerFromTo('.titles, .contactButton, .flower-img', 1, {
+      x:-200,
+      y:0,
+      opacity:0,
+      ease: 'power2.inOut',
+    }, {
+      x:0,
+      y:0,
+      opacity:1,
+      ease: 'power2.inOut',
+    }, 0.5)
+
+
+  },
+
+
+   
 }
 </script>
 
 <style>
 
-.title-script{
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.gsap {
+  position:fixed;
+  z-index: 0;
+}
+
+.spacing-3{
+  letter-spacing: 3px;
+}
+
+.title-h2{
+  font-family:'Lobster', cursive !important;
+  letter-spacing: 0.5px;
   font-size: 3em;
-  opacity: 0.2;
+  font-weight: 100;
+  margin-left: 0.2em;
+}
+
+.title-h1{
+  margin-top: 0.5em !important;
+  letter-spacing: 1px;
+  font-size: 0.8em;
+  background-color: #A9CBD9 !important;
+  margin-left: 2.5em
   
 }
 
+.contactButton{
+  margin-left: 2.5em
+}
 
-.title-block{
-  font-size: 2em;
-  font-weight: bold;
-  margin-top:-0.9em;
+.sheet{
+  padding-top: 6em;
   
 }
 
-.express{
-  font-size:1em
+.vh-end{
+  margin-bottom: 4em !important; 
 }
 
+.flower-img{
+  position:relative
+}
 
-@media only screen and (min-width: 992px){
+@media only screen and (min-width: 600px){
+  
+.title-h2{
+  font-size: 5em;
+}
 
-.title-script{
-  font-size: 3em;
-  opacity: 0.2;
+.title-h1{
+  font-size: 1.5em;
+  margin-left: 3.5em
   
 }
 
-.title-block{
-  font-size: 2em;
-  font-weight: bold;
-  margin-top:-0.7em;
-  
+.contactButton{
+  font-size: 1.5em;
+  margin-left: 3.5em
 }
- 
+
+
+}
+
+@media only screen and (min-width: 900px){
+  
+  .title-h2{
+  font-size: 8em;
+}
+
 }
 
 </style>

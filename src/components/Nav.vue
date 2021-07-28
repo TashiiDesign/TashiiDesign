@@ -1,74 +1,54 @@
 <template>
-<div >
+<div>
+     <!-- <h3>desktop</h3> -->
+    <v-navigation-drawer fixed permanent app color="#282828"  > 
+        <v-list-item class="pa-0 ma-0">
+            <v-list-item-content>
 
-  <v-row class="hidden-sm-and-up">
-    <v-dialog v-model="dialog" fullscreen hide-overlay transition="dialog-bottom-transition">
+            <router-link to='/' >
+                <img width="100%" class="pa-4 mb-4" src="../assets/android-chrome-512x512.png" >
+            </router-link>
 
-      <template v-slot:activator="{ on, attrs }" >
-        <v-btn width="100%" v-bind="attrs" v-on="on"  elevation="0" color="#D9B8B8" class="mt-4  white--text ">
-          Navigation
-        </v-btn>
-      </template>
+            <!-- <v-list-item-title>NAVIGATION </v-list-item-title> -->
+            <v-divider></v-divider>
+            <router-link to='/Portfolio' class="router "><v-btn tile text large elevation="0" height="4em" width="100%" class="d-block ma-0 white--text navItems">PORTFOLIO</v-btn></router-link>
+            <v-divider></v-divider>
+            <router-link to='/About' class="router "><v-btn tile text large elevation="0" height="4em" width="100%" class="d-block ma-0 white--text navItems">ABOUT</v-btn></router-link>
+            <v-divider></v-divider>
+            <router-link to='/Contact' class="router "><v-btn tile text large elevation="0" height="4em" width="100%" class="d-block ma-0 white--text navItems">CONTACT</v-btn></router-link>
+            <v-divider></v-divider>
+            <router-link to='/Blog' class="router "><v-btn tile text large elevation="0" height="4em" width="100%" class="d-block ma-0 white--text navItems">BLOG</v-btn></router-link>
+            <v-divider></v-divider>
 
-      <v-card class="d-flex flex-column justify-center" color="#591C1">
-          <v-btn icon @click="dialog = false">
-            <v-icon>mdi-close</v-icon>
-          </v-btn>
-            <v-item-group class="d-flex flex-column ma-2 justify-space-around pa-2 ma-3">
-              <v-btn @click="dialog = false" color="#BF999C" class="pa-8 mb-3"><router-link to='/' class="white--text router" >PORTFOLIO</router-link></v-btn>
-              <v-btn @click="dialog = false" color="#BF999C" class="pa-8 mb-3"><router-link to='/About' class="white--text router ">ABOUT</router-link></v-btn>
-              <v-btn @click="dialog = false" color="#BF999C" class="pa-8 mb-3"><router-link to='/Contact' class="white--text router">CONTACT</router-link></v-btn>
-              <v-btn @click="dialog = false" color="#BF999C" class="pa-8 mb-3"><router-link to='/Blog' class="white--text router">BLOG</router-link></v-btn>
+            <v-item-group class="d-flex justify-center pt-2">
+                <a href="https://www.linkedin.com/in/natasha-joshi-688796151/" class="router"><v-icon color="white" class=" ma-1" >mdi-linkedin</v-icon></a>
+                <a href="https://codepen.io/Tashii" class="router"><v-icon color="white" class=" ma-1">mdi-codepen</v-icon></a>
+                <a href="https://github.com/TashiiDesign" class="router"><v-icon color="white" class=" ma-1">mdi-github</v-icon></a>
+                <!-- <a href="https://github.com/TashiiDesign" class="router"><v-icon color="white" class=" ma-1">mdi-instagram</v-icon> -->
             </v-item-group>
 
-      </v-card>
+            </v-list-item-content>
+        </v-list-item>
 
-    </v-dialog>
-  </v-row>
+    </v-navigation-drawer>
 
-  <v-row class="hidden-xs-only" > 
-    <v-toolbar color="#BF999C" elevation="0" class="d-flex justify-space-around pattern">
-      <v-toolbar-items class="d-flex justify-space-between justify-space-around" >
-        <v-btn text class="pr-5 "><router-link to='/' class="white--text router" >PORTFOLIO</router-link></v-btn>
-        <v-spacer class="px-3"></v-spacer>
-        <v-btn text class="pl-5"><router-link to='/About' class="white--text router">ABOUT</router-link></v-btn>
-        <v-spacer class="px-3"></v-spacer>
-        <v-btn text class="pl-5"> <router-link to='/Contact' class="white--text router">CONTACT</router-link></v-btn>
-        <v-spacer class="px-3"></v-spacer>
-        <v-btn text class="pl-5"><router-link to='/Blog' class="white--text router">BLOG</router-link></v-btn>
-      </v-toolbar-items>
-    </v-toolbar>
-  </v-row>
-
-  
 </div>
 </template>
 
 <script>
 export default {
   data: () => ({
-    dialog: false,
+    
   })
+  
 }
 </script>
 
 <style>
 
-
-.router{
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-family: 'Karla', sans-serif;
-    text-decoration: none;
-    font-weight: bold;
+.navItems {
+    font-size: 1em !important
 }
-
-.pattern{
-  background-image: url('../assets/pattern.png');
-  background-repeat: repeat;
-  background-attachment: fixed;
-}
-
 
 
 </style>
