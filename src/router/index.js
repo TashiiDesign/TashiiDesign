@@ -11,7 +11,7 @@ Vue.use(VueRouter)
   const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'home',
     component: Home,
     meta: {
       title: 'Tashii Designs - Front-end Developer and Visual Designer ',
@@ -29,7 +29,7 @@ Vue.use(VueRouter)
   },
   {
     path: '/portfolio',
-    name: 'Portfolio',
+    name: 'portfolio',
     component: Portfolio,
     meta: {
       title: 'Tashii Designs - Front-end Developer and Visual Designer ',
@@ -47,7 +47,7 @@ Vue.use(VueRouter)
   },
   {
     path: '/about',
-    name: 'About',
+    name: 'about',
     component: About,
     meta: {
       title: 'Tashii Designs - Front-end Developer and Visual Designer - About ',
@@ -65,7 +65,7 @@ Vue.use(VueRouter)
   },
   {
     path: '/contact',
-    name: 'Contact',
+    name: 'contact',
     component: Contact,
     meta: {
       title: 'Tashii Designs - Front-end Developer and Visual Designer - Contact Me',
@@ -83,7 +83,7 @@ Vue.use(VueRouter)
   },
   {
     path: '/blog',
-    name: 'Blog',
+    name: 'blog',
     component: Blog,
     meta: {
       title: 'Tashii Designs - Front-end Developer and Visual Designer - Blog',

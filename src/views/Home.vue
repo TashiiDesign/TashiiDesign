@@ -28,7 +28,7 @@
 <script>
 
 import gsap from 'gsap'
- import Background from "../components/background.vue";
+import Background from "../components/background.vue";
 
 export default {
 
@@ -44,19 +44,7 @@ export default {
     
   }),
 
-  computed: {
 
-    // eslint-disable-next-line vue/return-in-computed-property
-      width () {
-        switch (this.$vuetify.breakpoint.name) {
-          case 'xs': return '60%'
-          case 'sm': return '30%' 
-          case 'md': return '25%'
-          case 'lg': return '25%'
-          case 'xl': return '25%'
-     }
-   }
-},
 
    mounted: function(){
 

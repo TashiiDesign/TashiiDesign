@@ -13,7 +13,7 @@
         </v-btn>
       </template>
 
-      <v-card class="d-flex flex-column justify-center rouded-0" color="#591C1">
+      <v-card class="d-flex flex-column justify-center rounded-0" color="#591C1">
           <v-btn icon @click="dialog = false">
             <v-icon>mdi-close</v-icon>
           </v-btn>
@@ -22,7 +22,7 @@
               <v-btn @click="dialog = false" color="#BF999C" class="pa-4 mb-4"><router-link to='/Portfolio' class="white--text router" >Portfolio</router-link></v-btn>
               <v-btn @click="dialog = false" color="#BF999C" class="pa-4 mb-4"><router-link to='/About' class="white--text router ">About</router-link></v-btn>
               <v-btn @click="dialog = false" color="#BF999C" class="pa-4 mb-4"><router-link to='/Contact' class="white--text router">Contact</router-link></v-btn>
-              <v-btn @click="dialog = false" color="#BF999C" class="pa-4 mb-4"><router-link to='/Blog' class="white--text router">Blog</router-link></v-btn>
+              <v-btn @click="dialog = false" color="#BF999C" class="pa-4 mb-4"><router-link to='/' class="white--text router">Blog</router-link></v-btn>
             </v-item-group>
 
       </v-card>
@@ -67,6 +67,8 @@ export default {
     font-family: 'Karla', sans-serif;
     text-transform: capitalize;
 }
+
+
 
 .v-sheet.v-card{
     border-radius: 0px !important;

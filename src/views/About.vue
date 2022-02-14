@@ -20,16 +20,23 @@
     <v-card color="#282828" class="aboutCard">
           <img :style="{'width':width}" src="../assets/about-page/headshot.png" class="">
     <v-card-text class="pt-0">
-          <p class="body-text ma-4 aboutText">My name is Tashii and I specialise in mostly visual design and branding but am also proficient in user experience, web and digital marketing. I want to help people express their own individuality through their unique brand because I believe that everyone has a story that can be told through design. </p>
+          <p class="body-text ma-4 aboutText">My name is Tashii and I specialise in both Visual Design and Front-end Development. However, I 
+            am also proficient in Branding, UX and Digital Marketing. </p>
 
-          <p class="body-text ma-4 aboutText">I hope to show off my creative and enthusiastic nature in all my creations and keep moving forward and in turn learning more about design and achieving satisfaction and fulfillment in everyday life.</p>
+          <p class="body-text ma-4 aboutText">If you'd like to know more about me or how I work, please don't hestitate to get in touch.</p>
     </v-card-text>
 
     </v-card>
 
-    <div>
+    <!-- <div>
       <h2 class="heading-1 white--text pa-3 ma-3 mainSkills">MAIN SKILLS</h2>
-    </div>
+    </div> -->
+
+   
+     
+      
+    
+
 
     <div>
 
@@ -58,7 +65,7 @@ export default {
 
     tl.add();
 
-    tl.staggerFromTo('.title-h2, .aboutCard, .mainSkills', 1, {
+    tl.staggerFromTo('.title-h2, .aboutCard, .mainSkills, .testimonials', 1, {
       x:-200,
       y:0,
       opacity:0,

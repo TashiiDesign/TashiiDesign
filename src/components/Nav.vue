@@ -11,13 +11,13 @@
 
             <!-- <v-list-item-title>NAVIGATION </v-list-item-title> -->
             <v-divider></v-divider>
-            <router-link to='/Portfolio' class="router "><v-btn tile text large elevation="0" height="4em" width="100%" class="d-block ma-0 white--text navItems">PORTFOLIO</v-btn></router-link>
+            <router-link to='/portfolio' class="router "><v-btn tile text large elevation="0" height="4em" width="100%" class="d-block ma-0 white--text navItems">PORTFOLIO</v-btn></router-link>
             <v-divider></v-divider>
-            <router-link to='/About' class="router "><v-btn tile text large elevation="0" height="4em" width="100%" class="d-block ma-0 white--text navItems">ABOUT</v-btn></router-link>
+            <router-link to='/about' class="router "><v-btn tile text large elevation="0" height="4em" width="100%" class="d-block ma-0 white--text navItems">ABOUT</v-btn></router-link>
             <v-divider></v-divider>
-            <router-link to='/Contact' class="router "><v-btn tile text large elevation="0" height="4em" width="100%" class="d-block ma-0 white--text navItems">CONTACT</v-btn></router-link>
+            <router-link to='/contact' class="router "><v-btn tile text large elevation="0" height="4em" width="100%" class="d-block ma-0 white--text navItems">CONTACT</v-btn></router-link>
             <v-divider></v-divider>
-            <router-link to='/Blog' class="router "><v-btn tile text large elevation="0" height="4em" width="100%" class="d-block ma-0 white--text navItems">BLOG</v-btn></router-link>
+            <router-link to='/' class="router "><v-btn tile text large elevation="0" height="4em" width="100%" class="d-block ma-0 white--text navItems">BLOG</v-btn></router-link>
             <v-divider></v-divider>
 
             <v-item-group class="d-flex justify-center pt-2">
