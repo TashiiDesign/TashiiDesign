@@ -34,7 +34,7 @@
           </div>
 
           <div v-if="hamsterCareApp">
-            <hamsterCareApp></hamsterCareApp>
+            <hamster-care-app></hamster-care-app>
           </div>
 
           <div v-if="bookCover">
@@ -80,7 +80,7 @@
               <v-img  src="../assets/portfolio-page/hamsterCareApp.png">
                 <v-expand-transition>
                   <div v-if="hover" class="d-flex transition-fast-in-fast-out v-card--reveal white--text" style="height: 100%;">
-                    <v-btn @click="dialog = true; pwa = true" color="white" class="pa-4 mb-4">More Info</v-btn>
+                    <v-btn @click="dialog = true; hamsterCareApp = true" color="white" class="pa-4 mb-4">More Info</v-btn>
 
                   </div>
                 </v-expand-transition>
@@ -196,33 +196,6 @@
          Logo Work
          <!-- <a href="/src/assets/Natasha-Joshi-Graphic-Design-Portfolio.pdf" >PDF Graphic Design Portfolio </a> -->
       </p>
-
-      <!-- <v-card
-    elevation="24"
-    max-width="50%"
-    class="mx-auto">
-      <v-carousel class="pa-5" :continuous="false"
-      :cycle="cycle"
-      :show-arrows="true"
-      hide-delimiters>
-        <v-carousel-item > 
-          <v-img src="../assets/portfolio-page/Interior-Design-logo-design-Tashii-Designs.jpg"></v-img>
-        </v-carousel-item>
-
-        <v-carousel-item> 
-          <v-img src="../assets/portfolio-page/Florist-logo-design-Tashii-Designs.jpg"></v-img>
-        </v-carousel-item>
-
-        <v-carousel-item > 
-          <v-img src="../assets/portfolio-page/Photography-logo-design-Tashii-Designs.jpg"></v-img>
-        </v-carousel-item>
-
-         <v-carousel-item > 
-          <v-img src="../assets/portfolio-page/Shimaguni-logo-design-Tashii-Designs.jpg"></v-img>
-        </v-carousel-item>
-      </v-carousel>
-      </v-card> -->
-  
          <div class="mb-4 pb-2"  >
           <v-row  justify="start" class="ml-2 mr-2" >
               <v-col cols="12" xs="9" sm="6" md="4" lg="4">
@@ -275,7 +248,7 @@ export default {
    "pwa-project": pwaProject,
    "character-chart": characterChart,
    "multiplayer-game": multiplayerGame,
-   "hamsterCareApp": hamsterCareApp,
+   "hamster-care-app": hamsterCareApp,
    "book-cover": bookCover,
    "vocab-cards": vocabCards,
    "beYou": beYou,

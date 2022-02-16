@@ -2,7 +2,7 @@
    <div>
     <v-card class="d-block">
        <v-card-title >Hamster Care App</v-card-title>
-      <v-img width="100%" src="../assets/portfolio-page/hamsterImage.jpg"></v-img>
+      <!-- <v-img width="100%" src="../assets/portfolio-page/hamsterImage.jpg"></v-img> -->
      
       <v-card-subtitle class="caption">Introduction</v-card-subtitle>
       <v-card-text>
