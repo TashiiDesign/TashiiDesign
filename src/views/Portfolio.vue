@@ -18,7 +18,7 @@
       </v-chip-group>  -->
 
        <v-dialog v-model="dialog" persistent  :width="width" transition="dialog-top-transition">
-          <v-btn icon @click="dialog = false; pwa = false; characterChart = false; multiplayerGame = false; hamsterCareApp = false; bookCover = false; vocabCards = false; beYou = false; flyerDesign = false">
+          <v-btn icon @click="dialog = false; pwa = false; characterChart = false; multiplayerGame = false; hamsterCareApp = false; kanjiSearchApp = false; bookCover = false; vocabCards = false; beYou = false; flyerDesign = false">
             <v-icon class="align-center white--text justify-space-around mx-auto" >mdi-close</v-icon>
           </v-btn>
           <div v-if="pwa">
@@ -35,6 +35,10 @@
 
           <div v-if="hamsterCareApp">
             <hamster-care-app></hamster-care-app>
+          </div>
+
+          <div v-if="kanjiSearchApp">
+            <kanji-search-app></kanji-search-app>
           </div>
 
           <div v-if="bookCover">
@@ -75,6 +79,21 @@
           </v-col>
 
            <v-col cols="12" xs="9" sm="6" md="4" lg="4" >
+            <v-hover v-slot="{ hover }">
+            <v-card class="portfolio-images" :class="{ 'on-hover': hover }" >
+              <v-img  src="../assets/portfolio-page/kanji-search-Tashii-Designs.png">
+                <v-expand-transition>
+                  <div v-if="hover" class="d-flex transition-fast-in-fast-out v-card--reveal white--text" style="height: 100%;">
+                    <v-btn @click="dialog = true; kanjiSearchApp = true" color="white" class="pa-4 mb-4">More Info</v-btn>
+
+                  </div>
+                </v-expand-transition>
+              </v-img>
+            </v-card>
+          </v-hover>
+          </v-col>
+
+          <v-col cols="12" xs="9" sm="6" md="4" lg="4" >
             <v-hover v-slot="{ hover }">
             <v-card class="portfolio-images" :class="{ 'on-hover': hover }" >
               <v-img  src="../assets/portfolio-page/hamsterCareApp.png">
@@ -237,6 +256,7 @@ import pwaProject from '../components/pwa-project.vue'
 import characterChart from '../components/character-chart.vue'
 import multiplayerGame from '../components/multiplayer-game.vue'
 import hamsterCareApp from '../components/hamsterCareApp.vue'
+import kanjiSearchApp from '../components/kanjiSearchApp.vue'
 import bookCover from '../components/book-cover.vue'
 import vocabCards from '../components/vocab-cards.vue'
 import beYou from '../components/beYou.vue'
@@ -249,6 +269,7 @@ export default {
    "character-chart": characterChart,
    "multiplayer-game": multiplayerGame,
    "hamster-care-app": hamsterCareApp,
+   "kanji-search-app": kanjiSearchApp,
    "book-cover": bookCover,
    "vocab-cards": vocabCards,
    "beYou": beYou,
