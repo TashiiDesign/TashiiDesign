@@ -20,23 +20,14 @@
     <v-card color="#282828" class="aboutCard">
           <img :style="{'width':width}" src="../assets/about-page/headshot.png" class="">
     <v-card-text class="pt-0">
-          <p class="body-text ma-4 aboutText">My name is Tashii and I specialise in both Visual Design and Front-end Development. However, I 
-            am also proficient in Branding, UX and Digital Marketing. </p>
+          <p class="body-text ma-4 aboutText">My name is Tashii and I specialise in both Front-end Development and Graphic Design but am also knowledgable
+            about UX Design, Digital Marketing and more. 
+          </p>
 
           <p class="body-text ma-4 aboutText">If you'd like to know more about me or how I work, please don't hestitate to get in touch.</p>
     </v-card-text>
 
     </v-card>
-
-    <!-- <div>
-      <h2 class="heading-1 white--text pa-3 ma-3 mainSkills">MAIN SKILLS</h2>
-    </div> -->
-
-   
-     
-      
-    
-
 
     <div>
 
@@ -75,7 +66,7 @@ export default {
       y:0,
       opacity:1,
       ease: 'power2.inOut',
-    }, 0.5)
+    }, 0.1)
 
 
   },

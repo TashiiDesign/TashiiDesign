@@ -3,8 +3,8 @@
 <v-sheet color="#282828" class="" >
 
   <h2 class="white--text ml-4 title-h2 ">Contact Me</h2>
-  <p class="pa-2 ma-2 white--text">Please click the link below to send me an enquiry, as the contact form below is not currently working. Thanks! </p> 
-  <a href="mailto:tashiidesign@gmail.com"  class="mail-link">TashiiDesign@gmail.com</a>
+  <div class="notice"><p class="pa-2 ma-2 white--text">Please click the link below to send me an enquiry, as the contact form below is not currently working. Thanks! </p> 
+  <a href="mailto:tashiidesign@gmail.com"  class="mail-link">TashiiDesign@gmail.com</a></div>
 
   <v-card class="contactForm pt-1 pb-1" color="#282828">
   <v-row  justify="start" class="form ma-5 pt-0 ">
@@ -40,8 +40,8 @@
 <script>
 import gsap from 'gsap'
 
-const querystring = require("querystring");
-const $axios = require('axios').default;
+// const querystring = require("querystring");
+const axios = require('axios').default;
 
 
 export default {
@@ -70,7 +70,7 @@ export default {
 
     tl.add();
 
-    tl.staggerFromTo('.title-h2, .contactForm', 1, {
+    tl.staggerFromTo('.title-h2, .notice, .contactForm', 1, {
       x:-200,
       y:0,
       opacity:0,
@@ -80,25 +80,27 @@ export default {
       y:0,
       opacity:1,
       ease: 'power2.inOut',
-    }, 0.5)
+    }, 0.1)
 
 
   },
 
   methods: {
     onSubmit(e) {
-          e.preventDefault();
-          $axios
-             .post(
-                 "https://tashii.co.uk/mail.php",
-                  querystring.stringify(this.form.message)
-             )
-             // eslint-disable-next-line no-unused-vars
-             .then((res) => {
-                 this.sent = true;
-                 console.log(this.form.message)
-             });
-      }
+      e.preventDefault();
+
+      axios.post("https://tashii.co.uk/mail.php", {
+        "name": this.form.name,
+        "email": this.form.email,
+        "message": this.form.message
+
+      }).then(() => {
+          this.sent = true;
+          console.log("success", this.form.message)
+      }).catch(error =>  {
+        console.log(error)
+      })
+    }
     }
   }
 </script>

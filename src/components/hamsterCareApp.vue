@@ -21,6 +21,7 @@
               will calculate their enclosure's floorspace as well as check how much enrichment is being provided.
               Based on the information given, the application will provide advice to hopefully educate new hamster owners on better care. 
           </p>
+      </v-card-text>
 
           <a href="https://hamster-care-app.web.app/" > <v-card-title>View the Application</v-card-title> </a>
          <a href="https://github.com/TashiiDesign/HamsterCareApp" > <v-card-title>View The Source Code</v-card-title> </a>

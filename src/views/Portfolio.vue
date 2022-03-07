@@ -300,7 +300,7 @@ export default {
 
     tl.add();
 
-    tl.staggerFromTo('.title-h2, .portfolioText', 1, {
+    tl.fromTo('.title-h2, .portfolioText', 1, {
       x:-200,
       y:0,
       opacity:0,
@@ -310,9 +310,9 @@ export default {
       y:0,
       opacity:1,
       ease: 'power2.inOut',
-    }, 0.5);
+    }, 0.1);
 
-    tl.staggerFromTo('.portfolio-images', 0.2, {
+    tl.fromTo('.portfolio-images', 0.2, {
       transformOrigin:"50% 50%", //changes the transform origin to middle of element
       scaleY:.55,
       scaleX:.55,

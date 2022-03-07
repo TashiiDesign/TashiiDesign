@@ -1,7 +1,7 @@
 <template>
  <v-card class="">
      <v-card-title >BeYou - Health Bar Package and Logo Design</v-card-title>
-      <v-img width="100%" src="../assets/portfolio-page/BeYou-Health-Bar-Design-Tashii-Designs2.jpg"></v-img>
+      <v-img width="50%" src="../assets/portfolio-page/BeYou-Health-Bar-Design-Tashii-Designs2.jpg"></v-img>
       <v-card-subtitle>About the project</v-card-subtitle>
       <v-card-text>
         <p>The objective of this project was to provide

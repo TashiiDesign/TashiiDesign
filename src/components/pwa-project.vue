@@ -2,7 +2,6 @@
   <div>
     <v-card class="d-block">
        <v-card-title >Progressive Web App Design & Development</v-card-title>
-      <v-img width="100%" src="../assets/portfolio-page/acorn-pwa-Tashii-Designs.png"></v-img>
      
       <v-card-subtitle class="caption">Introduction</v-card-subtitle>
       <v-card-text>

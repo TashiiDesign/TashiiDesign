@@ -6,7 +6,7 @@
 
     <div class="titles">
         <h2  class="white--text title-h2 ">I'm Tashii</h2>
-        <h1 class="dark-grey--text pa-1 pl-3 title-h1">BRANDING | WEB | MARKETING</h1> 
+        <h1 class="dark-grey--text pa-1 pl-3 title-h1">FRONT END DEV | GRAPHIC DESIGN</h1> 
     </div>
 
  <div class="mt-7 contactButton">
